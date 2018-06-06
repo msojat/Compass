@@ -3,5 +3,9 @@
     android:id="@+id/ar_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+    <TextureView
+        android:id="@+id/textureView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true" />
 </FrameLayout>

@@ -1,4 +1,4 @@
-package hr.tvz.msojat.compass;
+package hr.tvz.msojat.compass.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -9,7 +9,6 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.util.Log;
 import android.view.View;
 
 public class OverlayView extends View implements SensorEventListener {
