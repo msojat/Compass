@@ -11,6 +11,8 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.view.View;
 
+import hr.tvz.msojat.compass.R;
+
 public class OverlayView extends View implements SensorEventListener {
 
     public static final String DEBUG_TAG = "OverlayView";
@@ -83,25 +85,25 @@ public class OverlayView extends View implements SensorEventListener {
                 if ((degree <= 3) || (degree >= 357)){
                     contentPaint.setColor(Color.parseColor("#800000"));
                 }
-                compassData = "S";
+                compassData = getContext().getString(R.string.NORTH);
             } else if ((degree >= 45) && (degree <= 135)) {
                 contentPaint.setColor(Color.parseColor("#939393"));
                 if ((degree >= 87) && (degree <= 93)){
                     contentPaint.setColor(Color.parseColor("#800000"));
                 }
-                compassData = "I";
+                compassData = getContext().getString(R.string.EAST);
             } else if ((degree >= 135) && (degree <= 225)) {
                 contentPaint.setColor(Color.parseColor("#939393"));
                 if ((degree >= 177) && (degree <= 183)){
                     contentPaint.setColor(Color.parseColor("#800000"));
                 }
-                compassData = "J";
+                compassData = getContext().getString(R.string.SOUTH);
             } else if ((degree >= 225) && (degree <= 315)) {
                 contentPaint.setColor(Color.parseColor("#939393"));
                 if ((degree >= 267) && (degree <= 273)){
                     contentPaint.setColor(Color.parseColor("#800000"));
                 }
-                compassData = "Z";
+                compassData = getContext().getString(R.string.WEST);
             } else {
                 compassData = "";
             }
